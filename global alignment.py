@@ -71,9 +71,7 @@ def global_alignment(seq1, seq2, scoring_function):
     seq1a = ""
     seq2a = ""
     while i > 0 or j > 0:
-        print("current:", i, j)
         ip, jp = pointer[i][j]
-        print("going to:", ip, jp)
         if ip == i:
             #gap in y
             seq1a += "-"
@@ -95,11 +93,8 @@ def global_alignment(seq1, seq2, scoring_function):
 
     seq1a = seq1a[::-1]
     seq2a = seq2a[::-1]
-    print(f"seq1 alignment is {seq1a}")
-    print(f"seq2 alignment is {seq2a}")
 
     return seq1a, seq2a, id_score
-    #raise NotImplementedError()
 
 def scoring_function(aa_i,aa_j):
     blosum62 = substitution_matrices.load("BLOSUM62")
@@ -108,4 +103,5 @@ def scoring_function(aa_i,aa_j):
 
 seq1 = "AEMGDGPGILGS"
 seq2 = "AEMVLIGDGILPGAV"
-global_alignment(seq1,seq2,scoring_function)
+seq1a, seq2a, id_score = global_alignment(seq1,seq2,scoring_function)
+print(f"{seq1a}\n{seq2a}\n{id_score}")
