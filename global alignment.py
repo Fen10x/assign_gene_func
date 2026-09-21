@@ -78,7 +78,7 @@ seq2 = "AEMVLIGDGILPGAV"
 
 #scrape protein sequence from sars_cov_2.fa
 record = SeqIO.read("data/sars_cov_2.fa", "fasta")
-dna = record.seq[21561:25384]
+dna = record.seq[21562:25384]
 sars_cov_2 = dna.translate()
 
 #scrape protein sequence from 
