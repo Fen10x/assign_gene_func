@@ -33,14 +33,51 @@ def global_alignment(seq1, seq2, scoring_function):
 
     """
 
-    a = [[0] * (len(seq2) + 1) for _ in range(len(seq1) + 1)] #initialise scoring matrix to 0
-    for i in range(1, len(seq1)+1): #initialise left column with gap penalty
+    #define gap penalty
+    d = -8
+    #initialise pointer array
+    pointer = [[None] * (len(seq2) + 1) for _ in range(len(seq1) + 1)]
+
+    #initialise scoring matrix to 0
+    a = [[0] * (len(seq2) + 1) for _ in range(len(seq1) + 1)] 
+    #initialise left column with gap penalty
+    for i in range(1, len(seq1)+1): 
         a[i][0] = -i*8
-    for j in range(1, len(seq2)+1): #initialise top row with gap penalty
+    #initialise top row with gap penalty
+    for j in range(1, len(seq2)+1): 
         a[0][j] = -j*8
-        
+
+    #perform alignment
+    for i in range(1, len(seq1)+1):
+        for j in range(1, len(seq2)+1):
+            match = a[i-1][j-1] + scoring_function(seq1[i-1], seq2[j-1])
+            gap_x = a[i-1][j] - d
+            gap_y = a[i][j-1] - d 
+            a[i][j] = max(match, gap_x, gap_y)
+            if a[i][j] == match:
+                pointer[i][j] = (i-1,j-1)
+            elif a[i][j] == gap_x:
+                pointer[i][j] = (i-1,j)
+            else:
+                pointer[i][j] = (i,j-1)
   
-    print(a)
+    #traceback to construct alignment
+    i = len(seq1)+1 
+    j = len(seq2)+1
+    k = 0
+    id = 0
+    while i > 0 or j > 0:
+        ip, jp = pointer[i][j]
+        if ip == i:
+            #gap in y
+            j = jp
+        elif jp == j:
+            #gap in x
+            i = ip
+        else: 
+            if seq(i) == seq(j): id += 1
+            i = ip
+            j = jp
 
     #raise NotImplementedError()
 
@@ -49,6 +86,6 @@ def scoring_function(aa_i,aa_j):
     score = blosum62[aa_i][aa_j]
     return (score)
 
-seq1 = "AEMODOPOULOS"
+seq1 = "AEMGDGPGILGS"
 seq2 = "KLPSRTMNE"
 global_alignment(seq1,seq2,scoring_function)
