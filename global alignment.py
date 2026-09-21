@@ -73,9 +73,6 @@ def scoring_function(aa_i,aa_j):
     score = blosum62[aa_i][aa_j]
     return (score)
 
-seq1 = "AEMGDGPGILGS"
-seq2 = "AEMVLIGDGILPGAV"
-
 #scrape protein sequence from sars_cov_2.fa
 record = SeqIO.read("data/sars_cov_2.fa", "fasta")
 dna = record.seq[21562:25384]
