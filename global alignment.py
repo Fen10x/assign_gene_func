@@ -34,7 +34,7 @@ def global_alignment(seq1, seq2, scoring_function):
     """
 
     #define gap penalty
-    d = -8
+    d = 8
     #initialise pointer array
     pointer = [[None] * (len(seq2) + 1) for _ in range(len(seq1) + 1)]
 
@@ -43,9 +43,11 @@ def global_alignment(seq1, seq2, scoring_function):
     #initialise left column with gap penalty
     for i in range(1, len(seq1)+1): 
         a[i][0] = -i*8
+        pointer[i][0] = (i-1,0)
     #initialise top row with gap penalty
     for j in range(1, len(seq2)+1): 
         a[0][j] = -j*8
+        pointer[0][j] = (0,j-1)
 
     #perform alignment
     for i in range(1, len(seq1)+1):
@@ -62,23 +64,41 @@ def global_alignment(seq1, seq2, scoring_function):
                 pointer[i][j] = (i,j-1)
   
     #traceback to construct alignment
-    i = len(seq1)+1 
-    j = len(seq2)+1
+    i = len(seq1) 
+    j = len(seq2)
     k = 0
-    id = 0
+    identity = 0
+    seq1a = ""
+    seq2a = ""
     while i > 0 or j > 0:
+        print("current:", i, j)
         ip, jp = pointer[i][j]
+        print("going to:", ip, jp)
         if ip == i:
             #gap in y
-            j = jp
+            seq1a += "-"
+            seq2a += seq2[j-1]
         elif jp == j:
             #gap in x
-            i = ip
+            seq1a += seq1[i-1]
+            seq2a += "-"
         else: 
-            if seq(i) == seq(j): id += 1
-            i = ip
-            j = jp
+            #match
+            if seq1[i-1] == seq2[j-1]: identity += 1
+            seq1a += seq1[i-1]
+            seq2a += seq2[j-1]
 
+        i, j = ip, jp
+        k += 1
+
+    id_score = 100*identity/k 
+
+    seq1a = seq1a[::-1]
+    seq2a = seq2a[::-1]
+    print(f"seq1 alignment is {seq1a}")
+    print(f"seq2 alignment is {seq2a}")
+
+    return seq1a, seq2a, id_score
     #raise NotImplementedError()
 
 def scoring_function(aa_i,aa_j):
@@ -87,5 +107,5 @@ def scoring_function(aa_i,aa_j):
     return (score)
 
 seq1 = "AEMGDGPGILGS"
-seq2 = "KLPSRTMNE"
+seq2 = "AEMVLIGDGILPGAV"
 global_alignment(seq1,seq2,scoring_function)
