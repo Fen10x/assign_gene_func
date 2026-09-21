@@ -1,38 +1,10 @@
 #seq 1 = #read from the sars_cov_2.fa file and extract characters 21562 -> 25384 from the sequence
 #seq 2 = #use SeqIO.read to read the 'S' gene or product field from the 20 human coronaviruses
+from Bio import SeqIO
 from Bio.Align import substitution_matrices
+from Bio import Entrez
 
 def global_alignment(seq1, seq2, scoring_function):
-    """Global sequence alignment using the Needleman–Wunsch algorithm.
-
-    Indels should be denoted with the "-" character.
-
-    Parameters
-    ----------
-    seq1: str
-        First sequence to be aligned.
-    seq2: str
-        Second sequence to be aligned.
-    scoring_function: Callable
-
-    Returns
-    -------
-    str
-        First aligned sequence.
-    str
-        Second aligned sequence.
-    float
-        Final score of the alignment.
-
-    Examples
-    --------
-    >>> global_alignment("abracadabra", "dabarakadara", lambda x, y: [-1, 1][x == y])
-    ('-ab-racadabra', 'dabarakada-ra', 5.0)
-
-    Other alignments are not possible.
-
-    """
-
     #define gap penalty
     d = 8
     #initialise pointer array
@@ -103,5 +75,69 @@ def scoring_function(aa_i,aa_j):
 
 seq1 = "AEMGDGPGILGS"
 seq2 = "AEMVLIGDGILPGAV"
-seq1a, seq2a, id_score = global_alignment(seq1,seq2,scoring_function)
-print(f"{seq1a}\n{seq2a}\n{id_score}")
+
+#scrape protein sequence from sars_cov_2.fa
+record = SeqIO.read("data/sars_cov_2.fa", "fasta")
+dna = record.seq[21561:25384]
+sars_cov_2 = dna.translate()
+
+#scrape protein sequence from 
+accession_codes = {
+    # 6 known human coronaviruses
+    "Human-SARS": "NC_004718",
+    "Human-MERS": "NC_019843",
+    "Human-HCoV-OC43": "NC_006213",
+    "Human-HCoV-229E": "NC_002645",
+    "Human-HCoV-NL63": "NC_005831",
+    "Human-HCoV-HKU1": "NC_006577",
+    
+    # Bat
+    "Bat-CoV MOP1": "EU420138",
+    "Bat-CoV HKU8": "NC_010438",
+    "Bat-CoV HKU2": "NC_009988",
+    "Bat-CoV HKU5": "NC_009020",
+    "Bat-CoV RaTG13": "MN996532",
+    "Bat-CoV-ENT": "NC_003045",
+    
+    # Other animals
+    "Hedgehog-CoV 2012-174/GER/2012": "NC_039207",
+    "Pangolin-CoV MP789": "MT121216",
+    "Rabbit-CoV HKU14": "NC_017083",
+    "Duck-CoV isolate DK/GD/27/2014": "NC_048214",
+    "Feline infectious peritonitis virus": "NC_002306",  # cat
+    "Giraffe-CoV US/OH3/2003": "EF424623",
+    "Murine-CoV MHV/BHKR_lab/USA/icA59_L94P/2012": "KF268338",  # mouse
+    "Equine-CoV Obihiro12-2": "LC061274",  # horse
+}
+spike_proteins = []
+Entrez.email = "z5308203@ad.unsw.edu.au"
+for name, accession in accession_codes.items():
+    handle = Entrez.efetch(
+        db="nucleotide",
+        id=accession,
+        rettype="gb",
+        retmode="text"
+    )
+
+    record = SeqIO.read(handle, "genbank")
+    handle.close()
+
+    for feature in record.features:
+        if feature.type != "CDS":
+            continue
+
+        gene = feature.qualifiers.get("gene", [""])[0]
+        product = feature.qualifiers.get("product", [""])[0]
+
+        if gene == "S" or "spike protein" in product.lower():
+            record.seq = feature.extract(record.seq).translate()
+            record.description = name
+            spike_proteins.append(record)
+            #print(f"{name}: found Spike ({len(record.seq)} bp)")
+            break
+
+for spike_protein in spike_proteins:
+    seq1a, seq2a, id_score = global_alignment(sars_cov_2, spike_protein, scoring_function)
+    print(f"{spike_protein.description}: {id_score}")
+
+#seq1a, seq2a, id_score = global_alignment(sars_cov_2,seq2,scoring_function)
