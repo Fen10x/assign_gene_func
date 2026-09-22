@@ -1,0 +1,189 @@
+ORF1
+Human-SARS: ORF1ab polyprotein, 71.42857142857143
+Human-SARS: ORF1a polyprotein, 39.285714285714285
+Human-SARS: spike glycoprotein, 63.63636363636363
+Human-SARS: ORF3a protein, 70.0
+Human-SARS: ORF3b protein, 47.05882352941177
+Human-SARS: small envelope protein, 80.0
+Human-SARS: membrane glycoprotein M, 77.77777777777777
+Human-SARS: ORF6 protein, 71.42857142857143
+Human-SARS: ORF7a protein, 62.5
+Human-SARS: ORF7b protein, 36.36363636363637
+Human-SARS: ORF8a protein, 35.294117647058826
+Human-SARS: ORF8b protein, 30.303030303030305
+Human-SARS: nucleocapsid protein, 75.0
+Human-SARS: ORF9b protein, 38.46153846153846
+Human-SARS: ORF9a protein, 29.166666666666668
+Bat-CoV RaTG13: orf1ab polyprotein, 100.0
+Bat-CoV RaTG13: spike glycoprotein, 18.446601941747574
+Bat-CoV RaTG13: nonstructural protein NS3, 41.666666666666664
+Bat-CoV RaTG13: envelope protein, 62.5
+Bat-CoV RaTG13: membrane protein, 33.333333333333336
+Bat-CoV RaTG13: nonstructural protein NS6, 38.095238095238095
+Bat-CoV RaTG13: nonstructural protein NS7a, 62.5
+Bat-CoV RaTG13: nonstructural protein NS7b, 35.294117647058826
+Bat-CoV RaTG13: nonstructural protein NS8, 26.31578947368421
+Bat-CoV RaTG13: nucleocapsid protein, 46.666666666666664
+Pangolin-CoV MP789: orf1ab polyprotein, 97.6086956521739
+Pangolin-CoV MP789: surface glycoprotein, 71.42857142857143
+Pangolin-CoV MP789: ORF3 protein, 35.294117647058826
+Pangolin-CoV MP789: envelope protein, 32.0
+Pangolin-CoV MP789: membrane glycoprotein, 33.333333333333336
+Pangolin-CoV MP789: ORF6 protein, 26.923076923076923
+Pangolin-CoV MP789: ORF7a protein, 62.5
+Pangolin-CoV MP789: ORF7b protein, 36.36363636363637
+Pangolin-CoV MP789: ORF8 protein, 26.31578947368421
+Pangolin-CoV MP789: nucleocapsid phosphoprotein, 36.36363636363637
+Pangolin-CoV MP789: ORF10 protein, 37.5
+
+ORF2
+Human-SARS: ORF1ab polyprotein, 100.0
+Human-SARS: ORF1a polyprotein, 100.0
+Human-SARS: spike glycoprotein, 63.63636363636363
+Human-SARS: ORF3a protein, 40.0
+Human-SARS: ORF3b protein, 35.294117647058826
+Human-SARS: small envelope protein, 30.76923076923077
+Human-SARS: membrane glycoprotein M, 27.272727272727273
+Human-SARS: ORF6 protein, 62.5
+Human-SARS: ORF7a protein, 31.25
+Human-SARS: ORF7b protein, 50.0
+Human-SARS: ORF8a protein, 60.0
+Human-SARS: ORF8b protein, 40.0
+Human-SARS: nucleocapsid protein, 40.0
+Human-SARS: ORF9b protein, 38.46153846153846
+Human-SARS: ORF9a protein, 42.857142857142854
+Bat-CoV RaTG13: orf1ab polyprotein, 31.57894736842105
+Bat-CoV RaTG13: spike glycoprotein, 33.333333333333336
+Bat-CoV RaTG13: nonstructural protein NS3, 35.714285714285715
+Bat-CoV RaTG13: envelope protein, 46.15384615384615
+Bat-CoV RaTG13: membrane protein, 100.0
+Bat-CoV RaTG13: nonstructural protein NS6, 55.55555555555556
+Bat-CoV RaTG13: nonstructural protein NS7a, 31.25
+Bat-CoV RaTG13: nonstructural protein NS7b, 60.0
+Bat-CoV RaTG13: nonstructural protein NS8, 33.333333333333336
+Bat-CoV RaTG13: nucleocapsid protein, 40.0
+Pangolin-CoV MP789: orf1ab polyprotein, 31.57894736842105
+Pangolin-CoV MP789: surface glycoprotein, 100.0
+Pangolin-CoV MP789: ORF3 protein, 33.333333333333336
+Pangolin-CoV MP789: envelope protein, 42.857142857142854
+Pangolin-CoV MP789: membrane glycoprotein, 66.66666666666667
+Pangolin-CoV MP789: ORF6 protein, 100.0
+Pangolin-CoV MP789: ORF7a protein, 31.25
+Pangolin-CoV MP789: ORF7b protein, 40.0
+Pangolin-CoV MP789: ORF8 protein, 50.0
+Pangolin-CoV MP789: nucleocapsid phosphoprotein, 40.0
+Pangolin-CoV MP789: ORF10 protein, 66.66666666666667
+
+ORF3
+Human-SARS: ORF1ab polyprotein, 46.15384615384615
+Human-SARS: ORF1a polyprotein, 46.15384615384615
+Human-SARS: spike glycoprotein, 27.272727272727273
+Human-SARS: ORF3a protein, 100.0
+Human-SARS: ORF3b protein, 42.10526315789474
+Human-SARS: small envelope protein, 58.333333333333336
+Human-SARS: membrane glycoprotein M, 31.25
+Human-SARS: ORF6 protein, 40.0
+Human-SARS: ORF7a protein, 40.0
+Human-SARS: ORF7b protein, 33.333333333333336
+Human-SARS: ORF8a protein, 66.66666666666667
+Human-SARS: ORF8b protein, 33.333333333333336
+Human-SARS: nucleocapsid protein, 44.44444444444444
+Human-SARS: ORF9b protein, 66.66666666666667
+Human-SARS: ORF9a protein, 35.714285714285715
+Bat-CoV RaTG13: orf1ab polyprotein, 29.62962962962963
+Bat-CoV RaTG13: spike glycoprotein, 100.0
+Bat-CoV RaTG13: nonstructural protein NS3, 22.22222222222222
+Bat-CoV RaTG13: envelope protein, 25.0
+Bat-CoV RaTG13: membrane protein, 33.333333333333336
+Bat-CoV RaTG13: nonstructural protein NS6, 42.857142857142854
+Bat-CoV RaTG13: nonstructural protein NS7a, 33.333333333333336
+Bat-CoV RaTG13: nonstructural protein NS7b, 62.5
+Bat-CoV RaTG13: nonstructural protein NS8, 27.272727272727273
+Bat-CoV RaTG13: nucleocapsid protein, 55.55555555555556
+Pangolin-CoV MP789: orf1ab polyprotein, 29.62962962962963
+Pangolin-CoV MP789: surface glycoprotein, 45.0
+Pangolin-CoV MP789: ORF3 protein, 58.333333333333336
+Pangolin-CoV MP789: envelope protein, 80.0
+Pangolin-CoV MP789: membrane glycoprotein, 26.08695652173913
+Pangolin-CoV MP789: ORF6 protein, 34.61538461538461
+Pangolin-CoV MP789: ORF7a protein, 40.0
+Pangolin-CoV MP789: ORF7b protein, 27.77777777777778
+Pangolin-CoV MP789: ORF8 protein, 27.272727272727273
+Pangolin-CoV MP789: nucleocapsid phosphoprotein, 44.44444444444444
+Pangolin-CoV MP789: ORF10 protein, 45.45454545454545
+
+ORF4
+Human-SARS: ORF1ab polyprotein, 22.580645161290324
+Human-SARS: ORF1a polyprotein, 22.580645161290324
+Human-SARS: spike glycoprotein, 32.25806451612903
+Human-SARS: ORF3a protein, 46.666666666666664
+Human-SARS: ORF3b protein, 57.142857142857146
+Human-SARS: small envelope protein, 25.806451612903224
+Human-SARS: membrane glycoprotein M, 45.45454545454545
+Human-SARS: ORF6 protein, 33.333333333333336
+Human-SARS: ORF7a protein, 50.0
+Human-SARS: ORF7b protein, 50.0
+Human-SARS: ORF8a protein, 25.0
+Human-SARS: ORF8b protein, 75.0
+Human-SARS: nucleocapsid protein, 50.0
+Human-SARS: ORF9b protein, 36.36363636363637
+Human-SARS: ORF9a protein, 50.0
+Bat-CoV RaTG13: orf1ab polyprotein, 39.285714285714285
+Bat-CoV RaTG13: spike glycoprotein, 30.434782608695652
+Bat-CoV RaTG13: nonstructural protein NS3, 30.0
+Bat-CoV RaTG13: envelope protein, 38.888888888888886
+Bat-CoV RaTG13: membrane protein, 18.46153846153846
+Bat-CoV RaTG13: nonstructural protein NS6, 20.0
+Bat-CoV RaTG13: nonstructural protein NS7a, 33.333333333333336
+Bat-CoV RaTG13: nonstructural protein NS7b, 25.0
+Bat-CoV RaTG13: nonstructural protein NS8, 38.095238095238095
+Bat-CoV RaTG13: nucleocapsid protein, 50.0
+Pangolin-CoV MP789: orf1ab polyprotein, 39.285714285714285
+Pangolin-CoV MP789: surface glycoprotein, 30.0
+Pangolin-CoV MP789: ORF3 protein, 40.0
+Pangolin-CoV MP789: envelope protein, 36.36363636363637
+Pangolin-CoV MP789: membrane glycoprotein, 41.666666666666664
+Pangolin-CoV MP789: ORF6 protein, 25.0
+Pangolin-CoV MP789: ORF7a protein, 50.0
+Pangolin-CoV MP789: ORF7b protein, 50.0
+Pangolin-CoV MP789: ORF8 protein, 38.095238095238095
+Pangolin-CoV MP789: nucleocapsid phosphoprotein, 50.0
+Pangolin-CoV MP789: ORF10 protein, 57.142857142857146
+
+ORF5
+Human-SARS: ORF1ab polyprotein, 33.333333333333336
+Human-SARS: ORF1a polyprotein, 33.333333333333336
+Human-SARS: spike glycoprotein, 32.432432432432435
+Human-SARS: ORF3a protein, 32.0
+Human-SARS: ORF3b protein, 47.05882352941177
+Human-SARS: small envelope protein, 39.130434782608695
+Human-SARS: membrane glycoprotein M, 25.0
+Human-SARS: ORF6 protein, 42.857142857142854
+Human-SARS: ORF7a protein, 53.84615384615385
+Human-SARS: ORF7b protein, 28.571428571428573
+Human-SARS: ORF8a protein, 47.05882352941177
+Human-SARS: ORF8b protein, 36.36363636363637
+Human-SARS: nucleocapsid protein, 27.586206896551722
+Human-SARS: ORF9b protein, 54.54545454545455
+Human-SARS: ORF9a protein, 29.41176470588235
+Bat-CoV RaTG13: orf1ab polyprotein, 100.0
+Bat-CoV RaTG13: spike glycoprotein, 29.62962962962963
+Bat-CoV RaTG13: nonstructural protein NS3, 23.4375
+Bat-CoV RaTG13: envelope protein, 23.80952380952381
+Bat-CoV RaTG13: membrane protein, 31.57894736842105
+Bat-CoV RaTG13: nonstructural protein NS6, 30.76923076923077
+Bat-CoV RaTG13: nonstructural protein NS7a, 26.923076923076923
+Bat-CoV RaTG13: nonstructural protein NS7b, 47.05882352941177
+Bat-CoV RaTG13: nonstructural protein NS8, 26.31578947368421
+Bat-CoV RaTG13: nucleocapsid protein, 27.586206896551722
+Pangolin-CoV MP789: orf1ab polyprotein, 99.22206506364923
+Pangolin-CoV MP789: surface glycoprotein, 53.333333333333336
+Pangolin-CoV MP789: ORF3 protein, 25.0
+Pangolin-CoV MP789: envelope protein, 80.0
+Pangolin-CoV MP789: membrane glycoprotein, 31.57894736842105
+Pangolin-CoV MP789: ORF6 protein, 41.666666666666664
+Pangolin-CoV MP789: ORF7a protein, 53.84615384615385
+Pangolin-CoV MP789: ORF7b protein, 28.571428571428573
+Pangolin-CoV MP789: ORF8 protein, 47.05882352941177
+Pangolin-CoV MP789: nucleocapsid phosphoprotein, 27.586206896551722
+Pangolin-CoV MP789: ORF10 protein, 42.857142857142854

@@ -80,7 +80,7 @@ record = SeqIO.read("data/sars_cov_2.fa", "fasta")
 dna = record.seq[21562:25384]
 sars_cov_2 = dna.translate()
 
-#scrape protein sequence from 
+#scrape protein sequence from NCBI accession codes
 accession_codes = {
     # 6 known human coronaviruses
     "Human-SARS": "NC_004718",
