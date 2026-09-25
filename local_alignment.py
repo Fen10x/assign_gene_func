@@ -78,7 +78,7 @@ def scoring_function(aa_i,aa_j):
 #scrape protein sequence from sars_cov_2.fa
 from Bio import SeqIO
 record = SeqIO.read("data/sars_cov_2.fa", "fasta")
-dna = record.seq[9133:13483]
+dna = record.seq[421:667].reverse_complement() #get the reverse complement of the sequence
 sars_cov_2 = dna.translate()
 
 #scrape protein sequence from NCBI accession codes
@@ -104,11 +104,9 @@ for name, accession in accession_codes.items():
     protein = SeqIO.read(handle, "genbank")
     handle.close()
 
-    cds_count = 0
     for feature in protein.features:
         if feature.type != "CDS":
             continue
-        cds_count += 1
 
         protein = SeqRecord(feature.extract(record.seq).translate())
         protein.id = name
@@ -117,4 +115,4 @@ for name, accession in accession_codes.items():
 
 for protein in proteins:
     a, b, c = local_alignment(sars_cov_2, protein.seq, scoring_function)
-    print(f"{protein.id}: {protein.description}, {c}")
+    print(f"{protein.id}: {protein.description}, {c}, length: {len(a)}")
