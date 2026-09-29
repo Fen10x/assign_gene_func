@@ -17,6 +17,9 @@ def global_alignment(seq1, seq2, scoring_function):
         a[0][j] = -j*8
         pointer[0][j] = (0,j-1)
 
+    from Bio.Align import substitution_matrices
+    blosum62 = substitution_matrices.load("BLOSUM62")
+
     #perform alignment
     for i in range(1, n+1):
         for j in range(1, m+1):
@@ -74,6 +77,9 @@ def local_alignment(seq1, seq2, scoring_function):
 
     #initialise scoring matrix to 0 (does left column and top row automatically)
     a = [[0] * (m + 1) for _ in range(n + 1)]
+
+    from Bio.Align import substitution_matrices
+    blosum62 = substitution_matrices.load("BLOSUM62")
 
     #perform alignment
     for i in range(1, n+1):
